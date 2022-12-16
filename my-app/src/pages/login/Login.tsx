@@ -8,7 +8,7 @@ export function LoginPage (){
             <p>Login</p>
             <Link to="/home">dashboard</Link>
             <Link to="/register">register</Link>
-            <StyledButton radius="1" theme="green">oi</StyledButton>
+            <StyledButton large radius="2" color="green">oi</StyledButton>
         </>
     )
 }
