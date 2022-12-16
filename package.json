@@ -8,5 +8,8 @@
   "main": "index.js",
   "repository": "git@github.com:Kenzie-Academy-Brasil-Developers/Kenzie-Academy-Brasil-Developers-react-entrega-hamburgueria-v2-eliasjp.git",
   "author": "eliasjp <illumine1998@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
+  }
 }
