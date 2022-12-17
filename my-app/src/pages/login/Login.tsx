@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { StyledButton } from "../../styles/button"
 
+import { api } from "../../services/api"
+
 export function LoginPage (){
 
     return (
