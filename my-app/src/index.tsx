@@ -5,16 +5,19 @@ import reportWebVitals from './reportWebVitals';
 import "./index.css"
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/globalStyles';
+import { LoginProvider } from './context/LoginContext.tsx/LoginContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <GlobalStyles />
-      <App />
-    </BrowserRouter>
+      <BrowserRouter>
+        <LoginProvider>
+          <GlobalStyles />
+          <App />
+        </LoginProvider>
+      </BrowserRouter>
   </React.StrictMode>
 );
 

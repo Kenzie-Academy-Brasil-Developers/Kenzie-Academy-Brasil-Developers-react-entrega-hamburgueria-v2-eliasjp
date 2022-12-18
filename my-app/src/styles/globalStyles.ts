@@ -5,6 +5,11 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: var(--font-family-1);
+    }
+
+    html, body, #root {
+        height: 100%;
     }
 
     :root {
@@ -32,7 +37,10 @@ export const GlobalStyles = createGlobalStyle`
         --font-weight-2: 600; /* Semi-bold */
         --font-weight-3: 400; /* Regular */
 
+        --font-family-1: 'Inter', sans-serif;
+
         --border-radius-1: 8px;
         --border-radius-2: 5px;
+
     }
 `
