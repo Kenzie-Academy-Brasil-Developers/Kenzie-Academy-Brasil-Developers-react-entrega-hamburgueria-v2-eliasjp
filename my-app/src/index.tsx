@@ -6,6 +6,8 @@ import "./index.css"
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/globalStyles';
 import { LoginProvider } from './context/LoginContext.tsx/LoginContext';
+import { ProductsProvider } from './context/ProductsContext/ProductsContext';
+import { ModalProvider } from './context/ModalContext.tsx/ModalContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,8 +16,12 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
         <LoginProvider>
-          <GlobalStyles />
-          <App />
+          <ModalProvider>
+            <ProductsProvider>
+              <GlobalStyles />
+              <App />
+            </ProductsProvider>
+          </ModalProvider>
         </LoginProvider>
       </BrowserRouter>
   </React.StrictMode>

@@ -23,7 +23,7 @@ export function LoginPage (){
     }
     
     useEffect(() => {
-        checkAccount ()
+        checkAccount ("/", "/home")
     }, [])
 
     return (
