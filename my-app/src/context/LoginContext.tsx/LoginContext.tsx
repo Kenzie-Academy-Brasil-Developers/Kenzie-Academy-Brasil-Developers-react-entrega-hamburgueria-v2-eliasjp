@@ -24,18 +24,19 @@ export function LoginProvider ({ children }: iLoginProvider){
             })
         }
     }
-
-    async function checkAccount (path?: string){
-        const token = window.localStorage.getItem("@user_token")
+    
+    async function checkAccount ( pathError?: string, pathSuccess?: string,){
+        const token = JSON.parse(window.localStorage.getItem("@user_token") as string)
         if (token){
             try { 
-                await api.get("/products", { headers: { Authorization: `Bearer ${JSON.parse(token)}` } })
+                await api.get("/products", { headers: { Authorization: `Bearer ${token}` } })
                 api.defaults.headers.common["Authorization"] = `Bearer ${token}`
+                pathSuccess && navigate(pathSuccess)
 
             }
             catch(error: any) {
                 window.localStorage.clear()
-                path && navigate(`/${path}`)
+                pathError && navigate(pathError)
             }
         }
     }

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface iLoginContext {
     loginRequest: (data: {}) => void;
-    checkAccount: (path?: string) => void;
+    checkAccount: (pathError?: string, pathSuccess?: string) => void;
 }
 
 export interface iLoginProvider {
