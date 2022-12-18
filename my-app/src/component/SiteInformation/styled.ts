@@ -4,7 +4,7 @@ export const StyledInfoSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 22px;
-
+    
     padding: 40px 9px 0px 9px;
     h1 {
         font-size: var(--font-size-1);
