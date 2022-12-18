@@ -1,6 +1,5 @@
 import { StyledInfoDiv, StyledInfoSection } from "./styled";
 
-
 export function SiteInformation (){
 
     return (

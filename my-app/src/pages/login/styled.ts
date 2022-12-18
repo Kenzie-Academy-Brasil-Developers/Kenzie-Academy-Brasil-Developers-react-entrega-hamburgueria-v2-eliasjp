@@ -7,7 +7,6 @@ export const ContainerLogin = styled.div`
         display: flex;
         align-items: center;
     }
-    
 `
 
 export const LoginContentContainer = styled.div`

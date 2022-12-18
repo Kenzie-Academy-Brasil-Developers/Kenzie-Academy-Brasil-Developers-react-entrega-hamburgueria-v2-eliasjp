@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
-import { useState, useContext, useEffect } from "react"
+import { useContext, useEffect } from "react"
 import { loginFormSchema } from "./schema"
 
 import { StyledLoginMain, StyledLoginForm, ContainerLogin, LoginContentContainer } from "./styled"
