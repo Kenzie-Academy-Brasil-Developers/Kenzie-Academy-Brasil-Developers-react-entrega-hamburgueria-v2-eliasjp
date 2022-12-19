@@ -18,6 +18,7 @@ export const StyledCartSection = styled.section`
         max-height: 350px;
         list-style: none;
         overflow-y: scroll;
+        padding: 20px 20px;
     }
 `
 
