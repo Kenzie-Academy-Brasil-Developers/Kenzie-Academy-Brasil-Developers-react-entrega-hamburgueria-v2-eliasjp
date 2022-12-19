@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
+    "@types/yup": "^0.32.0",
+    "axios": "^1.2.1",
+    "react-hook-form": "^7.41.0",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.4.5",
+    "react-toastify": "^9.1.1",
+    "styled-components": "^5.3.6"
+  },
+  "name": "Kenzie-Academy-Brasil-Developers-react-entrega-hamburgueria-v2-eliasjp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Kenzie-Academy-Brasil-Developers/Kenzie-Academy-Brasil-Developers-react-entrega-hamburgueria-v2-eliasjp.git",
+  "author": "eliasjp <illumine1998@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
+  }
+}
