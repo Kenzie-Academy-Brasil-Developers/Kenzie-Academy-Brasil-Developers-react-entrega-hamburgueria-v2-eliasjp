@@ -4,8 +4,17 @@ export const StyledCartHeader = styled.header`
     display: flex;
     padding: 13px 22px;
     justify-content: space-between;
+    align-items: center;
     background: var(--color-primary);
     border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
+
+    button {
+        width: 30px;
+        height: 30px;
+        border: transparent;
+        background-color: transparent;
+        cursor: pointer;
+    }
 `
 
 export const StyledCartSection = styled.section`
