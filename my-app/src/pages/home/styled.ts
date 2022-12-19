@@ -42,4 +42,14 @@ export const StyledProductSection = styled.section`
         list-style: none;
         gap: 20px;
     }
+
+    @media (min-width: 1024px){
+        max-width: 980px;
+        margin: 0 auto;
+
+        ul {
+            overflow: none;
+            flex-wrap: wrap;
+        }
+    }
 `
