@@ -44,7 +44,7 @@ export const StyledProductSection = styled.section`
     }
 
     @media (min-width: 1024px){
-        max-width: 980px;
+        max-width: 960px;
         margin: 0 auto;
 
         ul {

@@ -7,6 +7,9 @@ export const StyledCartCard = styled.li`
         width: 50px;
         height: 50px;
         align-self: top;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 `
 
