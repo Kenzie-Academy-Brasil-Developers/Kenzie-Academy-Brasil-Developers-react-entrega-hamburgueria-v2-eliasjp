@@ -10,7 +10,7 @@ import { StyledHeader, StyledProductList } from "./styled"
 export function HomePage (){
     const { products, getProducts } = useContext(ProductsContext)
     const { modalOpen, setModalOpen, setContent } = useContext(ModalContext)
-    const { checkAccount } = useContext(LoginContext)
+    const { checkAccount, logout } = useContext(LoginContext)
 
     const [ loading, setLoading ] = useState(false)
     const [ openSearch, setOpenSearch ] = useState(false)
@@ -43,7 +43,7 @@ export function HomePage (){
         setOpenSearch(!openSearch)
     }
 
-    function teste (){
+    function callModal (){
         setModalOpen(!modalOpen)
         setContent(<CartModal />)
     }
@@ -52,11 +52,11 @@ export function HomePage (){
         <div>
             <div>
                 <StyledHeader>
-                    <h1>teste</h1>
+                    <h1>Burger <span>Kenzie</span></h1>
                     <nav>
-                        <button onClick={() => callSearch()}>search</button>
-                        <button onClick={() => teste ()}>cart</button>
-                        <button>Exit</button>
+                        <button onClick={() => callSearch ()}><span className="material-symbols-outlined">search</span></button>
+                        <button onClick={() => callModal ()}><span className="material-symbols-outlined">shopping_cart</span></button>
+                        <button onClick={() => logout ()}><span className="material-symbols-outlined">logout</span></button>
                         {openSearch && <p>opened search</p>}
                     </nav>
                 </StyledHeader>

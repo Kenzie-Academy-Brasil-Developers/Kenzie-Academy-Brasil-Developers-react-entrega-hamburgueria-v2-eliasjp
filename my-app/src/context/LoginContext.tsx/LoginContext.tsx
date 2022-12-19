@@ -41,8 +41,13 @@ export function LoginProvider ({ children }: iLoginProvider){
         }
     }
 
+    function logout (){
+        window.localStorage.clear()
+        navigate("/")
+    }
+
     return (
-        <LoginContext.Provider value={{ loginRequest, checkAccount }}>
+        <LoginContext.Provider value={{ loginRequest, checkAccount, logout }}>
             { children }
         </LoginContext.Provider>
     )
