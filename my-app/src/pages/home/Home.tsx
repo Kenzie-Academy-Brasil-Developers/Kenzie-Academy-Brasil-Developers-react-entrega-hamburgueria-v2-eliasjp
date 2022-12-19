@@ -1,10 +1,13 @@
 import { useState, useContext, useEffect } from "react"
-import { CartModal } from "../../component/CartModal/CartModal"
+
+import { CartModal } from "../../component/Cart/CartModal/CartModal"
 import { ProductCard } from "../../component/ProductCard/ProductCard"
+import { SearchBar } from "../../component/SearchBar/SearchBar"
+
 import { LoginContext } from "../../context/LoginContext.tsx/LoginContext"
 import { ModalContext } from "../../context/ModalContext.tsx/ModalContext"
 import { ProductsContext } from "../../context/ProductsContext/ProductsContext"
-import { api } from "../../services/api"
+
 import { StyledHeader, StyledProductSection } from "./styled"
 
 export function HomePage (){
@@ -12,12 +15,11 @@ export function HomePage (){
     const { modalOpen, setModalOpen, setContent } = useContext(ModalContext)
     const { checkAccount, logout } = useContext(LoginContext)
 
-    const [ loading, setLoading ] = useState(false)
     const [ openSearch, setOpenSearch ] = useState(false)
+    const [ filterProducts, setFilterProducts ] = useState<any[]>([])
 
     useEffect(() => {
         try {
-            setLoading(true)
             checkAccount ("/")
             getProducts ()
         }
@@ -25,22 +27,28 @@ export function HomePage (){
             return
         }
         finally {
-            setLoading(false)
         }
     }, [])
 
     function loadProducts (){
-        if (!loading){
+        if (!filterProducts.length){
             return products.map(element => {
-                return <ProductCard product={element} key ={element.id}/>
+                return <ProductCard product={element} key={element.id}/>
             })
-        } else {
-            return (<p>Carregando</p>)
+        } else if (filterProducts.length){
+            return filterProducts.map(element => {
+                console.log(element.id)
+                return <ProductCard product={element} key={element.id}/>
+            })
         }
     }
 
     function callSearch (){
-        setOpenSearch(!openSearch)
+        if (openSearch){
+            return <SearchBar openSearch={openSearch} setOpenSearch={setOpenSearch} products={products} setFilterProducts={setFilterProducts}/>
+        } else {
+            return <button onClick={() => setOpenSearch(!openSearch)}><span className="material-symbols-outlined">search</span></button>
+        }
     }
 
     function callModal (){
@@ -54,10 +62,9 @@ export function HomePage (){
                 <StyledHeader>
                     <h1>Burger <span>Kenzie</span></h1>
                     <nav>
-                        <button onClick={() => callSearch ()}><span className="material-symbols-outlined">search</span></button>
+                        { callSearch ()}
                         <button onClick={() => callModal ()}><span className="material-symbols-outlined">shopping_cart</span></button>
                         <button onClick={() => logout ()}><span className="material-symbols-outlined">logout</span></button>
-                        {openSearch && <p>opened search</p>}
                     </nav>
                 </StyledHeader>
                 
