@@ -14,6 +14,22 @@ export const StyledCartSection = styled.section`
     background: #FFFFFF;
 
     ul {
+        width: 100%;
+        max-height: 350px;
         list-style: none;
+        overflow-y: scroll;
+    }
+`
+
+export const StyledEmptyCart = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 10px;
+
+    h3 {
+        text-align: center;
     }
 `
