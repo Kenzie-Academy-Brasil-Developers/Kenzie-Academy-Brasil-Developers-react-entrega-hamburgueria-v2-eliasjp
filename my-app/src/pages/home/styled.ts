@@ -48,7 +48,7 @@ export const StyledProductSection = styled.section`
         margin: 0 auto;
 
         ul {
-            overflow: none;
+            overflow-x: hidden;
             flex-wrap: wrap;
         }
     }

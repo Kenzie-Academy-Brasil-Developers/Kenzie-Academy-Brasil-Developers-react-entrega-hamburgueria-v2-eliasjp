@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { ProductsContext } from "../../context/ProductsContext/ProductsContext";
+import { ProductsContext } from "../../../context/ProductsContext/ProductsContext";
 
-import { StyledButton } from "../../styles/button";
+import { StyledButton } from "../../../styles/button";
 import { StyledResetContainer } from "./styled";
 
 export function CartReset (){

@@ -1,7 +1,7 @@
 import { useContext } from "react"
 
-import { iProductsObject } from "../../context/ProductsContext/interface"
-import { ProductsContext } from "../../context/ProductsContext/ProductsContext"
+import { iProductsObject } from "../../../context/ProductsContext/interface"
+import { ProductsContext } from "../../../context/ProductsContext/ProductsContext"
 import { StyledCartCardInformation, StyledCartCard, StyledCartCardCounter } from "./styled"
 
 
