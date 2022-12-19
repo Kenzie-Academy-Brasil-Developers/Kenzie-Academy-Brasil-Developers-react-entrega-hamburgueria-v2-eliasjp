@@ -5,7 +5,7 @@ import { LoginContext } from "../../context/LoginContext.tsx/LoginContext"
 import { ModalContext } from "../../context/ModalContext.tsx/ModalContext"
 import { ProductsContext } from "../../context/ProductsContext/ProductsContext"
 import { api } from "../../services/api"
-import { StyledHeader, StyledProductList } from "./styled"
+import { StyledHeader, StyledProductSection } from "./styled"
 
 export function HomePage (){
     const { products, getProducts } = useContext(ProductsContext)
@@ -61,11 +61,11 @@ export function HomePage (){
                     </nav>
                 </StyledHeader>
                 
-                <section>
-                    <StyledProductList>
+                <StyledProductSection>
+                    <ul>
                         { loadProducts ()}
-                    </StyledProductList>
-                </section>
+                    </ul>
+                </StyledProductSection>
             </div>
         </div>
 
