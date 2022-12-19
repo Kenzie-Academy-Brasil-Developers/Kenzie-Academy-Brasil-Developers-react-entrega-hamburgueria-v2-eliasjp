@@ -21,6 +21,12 @@ export const StyledHeader = styled.header`
         display: flex;
         align-items: center;
         gap: 10px;
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
     }
 `
 
