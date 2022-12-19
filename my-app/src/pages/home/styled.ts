@@ -4,6 +4,7 @@ export const StyledHeader = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 18px 10px 24px 10px;
 
     h1 {
         font-size: var(--font-size-1);
@@ -30,11 +31,15 @@ export const StyledHeader = styled.header`
     }
 `
 
-export const StyledProductList = styled.ul`
-    display: flex;
-    flex-direction: row;
+export const StyledProductSection = styled.section`
+    padding: 0 9px;
 
-    overflow-x: scroll;
-    list-style: none;
-    gap: 20px;
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        overflow-x: scroll;
+        list-style: none;
+        gap: 20px;
+    }
 `
