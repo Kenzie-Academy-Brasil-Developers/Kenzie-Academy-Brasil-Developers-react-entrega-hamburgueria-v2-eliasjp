@@ -2,7 +2,7 @@ import { useContext } from "react"
 
 import { iProductsObject } from "../../context/ProductsContext/interface"
 import { ProductsContext } from "../../context/ProductsContext/ProductsContext"
-import { StyledCartCaraInformation, StyledCartCard, StyledCartCardCounter } from "./styled"
+import { StyledCartCardInformation, StyledCartCard, StyledCartCardCounter } from "./styled"
 
 
 export function CartCard ({ element }: any){
@@ -36,13 +36,13 @@ export function CartCard ({ element }: any){
     return (
         <>
             <StyledCartCard key={element.id}>
-                <StyledCartCaraInformation>
+                <StyledCartCardInformation>
                     <img src={element.img} />
                     <div>
                         <h3>{element.name}</h3>
                         {itemCounter()}
                     </div>
-                </StyledCartCaraInformation>
+                </StyledCartCardInformation>
                 <button onClick={() => removeFromCart(element)}>Excluir</button>
             </StyledCartCard>
         </>

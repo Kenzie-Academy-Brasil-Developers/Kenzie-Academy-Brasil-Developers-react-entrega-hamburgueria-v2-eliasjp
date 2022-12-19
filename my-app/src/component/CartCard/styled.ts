@@ -10,7 +10,7 @@ export const StyledCartCard = styled.li`
     }
 `
 
-export const StyledCartCaraInformation = styled.div`
+export const StyledCartCardInformation = styled.div`
     display: flex;
 
     img {

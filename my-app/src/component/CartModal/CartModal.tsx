@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { ModalContext } from "../../context/ModalContext.tsx/ModalContext"
 import { ProductsContext } from "../../context/ProductsContext/ProductsContext"
 import { CartCard } from "../CartCard/CartCard"
-import { StyledCartHeader, StyledCartSection } from "./styled"
+import { StyledCartHeader, StyledCartSection, StyledEmptyCart } from "./styled"
 
 export function CartModal (){
     const { setModalOpen } = useContext(ModalContext)
@@ -12,10 +12,10 @@ export function CartModal (){
     function renderCart (){
         if (!cartProducts.length){
             return (
-                <>
+                <StyledEmptyCart>
                     <h3>Carrinho está vazio</h3>
                     <small>Adicione itens</small>
-                </>
+                </StyledEmptyCart>
             )
         } else {
             return (
