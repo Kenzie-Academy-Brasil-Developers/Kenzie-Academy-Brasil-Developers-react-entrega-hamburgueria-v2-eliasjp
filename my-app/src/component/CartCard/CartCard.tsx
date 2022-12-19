@@ -43,7 +43,7 @@ export function CartCard ({ element }: any){
                         {itemCounter()}
                     </div>
                 </StyledCartCardInformation>
-                <button onClick={() => removeFromCart(element)}>Excluir</button>
+                <button onClick={() => removeFromCart(element)}><span className="material-symbols-outlined">delete</span></button>
             </StyledCartCard>
         </>
     )
