@@ -3,6 +3,7 @@ import { useContext } from "react"
 import { ModalContext } from "../../context/ModalContext.tsx/ModalContext"
 import { ProductsContext } from "../../context/ProductsContext/ProductsContext"
 import { CartCard } from "../CartCard/CartCard"
+import { CartPrice } from "../CartPrice/CartPrice"
 import { StyledCartHeader, StyledCartSection, StyledEmptyCart } from "./styled"
 
 export function CartModal (){
@@ -27,6 +28,7 @@ export function CartModal (){
                             )
                         })}
                     </ul>
+                    <CartPrice />
                 </>
             )
         }
