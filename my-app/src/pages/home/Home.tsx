@@ -52,7 +52,7 @@ export function HomePage (){
         <div>
             <div>
                 <StyledHeader>
-                    <h1>teste</h1>
+                    <h1>Burger <span>Kenzie</span></h1>
                     <nav>
                         <button onClick={() => callSearch()}>search</button>
                         <button onClick={() => teste ()}>cart</button>
